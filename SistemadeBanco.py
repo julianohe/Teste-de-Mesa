@@ -3,6 +3,7 @@ class Banco:
 
  [d] Depositar
  [s] Sacar
+ [p] Pix
  [e] Extrato
  [q] Sair
 
@@ -53,6 +54,25 @@ class Banco:
 
    else:
     print("Operação falhou! O valor informado é inválido.")
+
+
+  elif opcao == "p":
+
+   Pixtransferencia = (input("Nome da Pessoa que vai receber:"))
+   valor = float(input("Informe o valor de envio: "))
+   nome = Pixtransferencia
+
+   if valor > 0:
+    saldo -= valor
+    extrato += f"Saque: R$ {valor:.2f}\n"
+    numero_saques += 1
+
+
+   print("\n================ EXTRATO - PIX ================")
+   print(f"\nNome: {nome}")
+   print(f"\nEnvio: R$ {valor:.2f}")
+
+
 
   elif opcao == "e":
    print("\n================ EXTRATO ================")
