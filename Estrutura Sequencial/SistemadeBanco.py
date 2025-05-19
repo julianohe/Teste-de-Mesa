@@ -1,12 +1,17 @@
+import textwrap
+
+
 class Banco:
- menu = """
 
- [d] Depositar
- [s] Sacar
- [p] Pix
- [e] Extrato
- [q] Sair
+ menu = """\n
+ 
+ ======== MENU ========
 
+ [d]\t Depositar
+ [s]\t Sacar
+ [p]\t Pix
+ [e]\t Extrato
+ [q]\t Sair
  => """
 
  saldo = 0
@@ -77,7 +82,7 @@ class Banco:
   elif opcao == "e":
    print("\n================ EXTRATO ================")
    print("Não foram realizadas movimentações." if not extrato else extrato)
-   print(f"\nSaldo: R$ {saldo:.2f}")
+   print(f"\nSald2o: R$ {saldo:.2f}")
    print("==========================================")
 
   elif opcao == "q":
@@ -85,3 +90,4 @@ class Banco:
 
   else:
    print("Operação inválida, por favor selecione novamente a operação desejada.")
+
